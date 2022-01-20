@@ -1,5 +1,14 @@
 nodes:
+# input
 - input.live
-- model.yolo
-- draw.bbox
+
+# model
+- model.posenet
+
+# dabble
+
+# draw
+- draw.poses
+
+# output
 - output.screen

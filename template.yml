@@ -1,0 +1,51 @@
+# This file shows all currently available nodes in peekingduck
+
+nodes:
+# input
+- input.live # Reads a videofeed from a stream, e.g., webcam.
+
+- input.recorded # Reads video/images from a directory.
+## input: None
+## output: 
+### `img` (np.ndarray): representation of image in BGR format in height, width, channel
+### `pipeline_end` (bool): Evaluates as `True` when pipeline is completed.
+### `filename` (str): The filename of video/image being read
+### `saved_video_fps` (float): The FPS of the recorded video upon filming
+
+
+# model
+- model.efficientdet # Slower but more accurate object detection model.
+- model.hrnet # Slower but more accurate Pose Estimation model.
+- model.mtcnn # Fast face detection model that works best with unmasked faces.
+- model.posenet # Fast Pose Estimation model.
+- model.yolo # Fast Object Detection model
+- model.yolo_face # Fast face detection model that can distinguish between masked and unmasked faces.
+- model.yolo_license_plate # License Plate Detection model
+
+# dabble
+- dabble.bbox_count # Counts the number of detected boxes.
+- dabble.bbox_to_3d_loc # Estimates the 3D coordinates of an object given a 2D bounding box.
+- dabble.bbox_to_btm_midpoint # Converts bounding boxes to a single point of reference
+- dabble.check_large_groups # Checks if number of objects in a group exceeds a threshold.
+- dabble.check_nearby_objs # Checks if detected objects are near each other.
+- dabble.fps # Estimates the 3D coordinates of an object given a 2D bounding box.
+- dabble.group_nearby_objs # Assigns objects in close proximity to groups.
+- dabble.keypoints_to_3d_loc # Estimates the 3D coordinates of a human given 2D pose coordinates.
+- dabble.zone_count # Counts the number of detected objects within a boundary.
+
+# draw
+- draw.bbox # Draws bounding boxes over detected objects.
+- draw.blur_bbox # Blurs area bounded by bounding boxes over detected object.
+- draw.btm_midpoint # Draws the lowest middle point of a bounding box.
+- draw.group_bbox_and_tag # Draws detected groups and their tags.
+- draw.image_processor # Adjusts brightness of an incoming image.
+- draw.legend # Displays info from dabble nodes such as FPS, object count, and zone count in a legend box.
+- draw.mosaic_bbox # Mosaics area bounded by bounding boxes over detected object
+- draw.poses # Draws keypoints on a detected pose.
+- draw.tag # Displays a tag on bounding box
+- draw.zones # Draws the 2D boundaries of a zone.
+
+# output
+- output.screen # Records the nodes outputs to a CSV file.
+- output.media_writer # Writes the output image/video to file.
+- output.screen # Shows the outputs on your display.
