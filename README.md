@@ -1,7 +1,8 @@
-cookiecutter
+PeekingDuck Familiarisation (Human Pose Estimation + Object Detection)
 ==============================
 
-A short description of the project.
+This project explores human pose estimation and object detection, which are
+the bread and butter of PeekingDuck's models. 
 
 Project Organization
 ------------
